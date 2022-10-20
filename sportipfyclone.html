@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-hidden">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>player</title>
+    <link rel="stylesheet" href="sportifycss.css">
+    <script src="./jquery-1.4.4.min.js"></script>
+    <link rel="stylesheet" href="./bootstrap.css">
+</head>
+
+<body class="row overflow-hidden  m-0">
+
+    <div class="h-100 m-auto col-lg-6 col-sm-12 position-relative bg-dark player-container overflow-hidden  p-0">
+
+        <div class="get-music-list px-4 mb-4 " style="padding-bottom: 3rem;">
+
+        </div>
+
+        <!-- search container here -->
+        <div class="search">
+            <label for="search" class="text-white">search:   <input type="search" name="" id="search" oninput="search()"></label>
+        </div>
+        <!-- end of search container -->
+
+
+        <div class="music-library my-2 px-2 position-absolute  w-100 overflow-auto bg-dark" style="z-index: 10;max-height: 60vh;">
+        </div>
+
+        <!-- player screen with the icon to display the current song image -->
+        <div class=" next-music-image position-relative h-50  mx-auto" style="width: 95%;">
+            <div class="player-screen position h-100 p-0 m-0 m-auto w-100">
+                <div class="vol"></div>
+                <input type="range" name="" id="volume" step="0.1" max="1" oninput="vol()">
+            </div>
+        </div>
+        <!--end of  player screen with the icon to display the current song image -->
+
+        <!-- the artist contner contain  all the song info about the artist and it name  -->
+
+        <div class="animate-favorite text-center py-2">
+            <span></span>
+        </div>
+        <div class="px-3 w-100 d-flex justify-content-between align-items-center py-2 my-4 text-white">
+            <div class="d-flex flex-column g-2 text-white">
+                <div class="song-name">
+                    <div class="music-name fw-bold " style="padding-left:0px">
+                        no-music
+                    </div>
+                </div>
+                <div class="artist-name  fst-italic px-1">
+                    unknown
+                </div>
+            </div>
+            <div class="favorite-icon fs-3" style="color: white;">
+                0
+            </div>
+        </div>
+        <!--end of artist container the artist contner contain  all the song info about the artist and it name  -->
+
+        </style>
+        <div class="running-and-time text-white py-2 m-auto" style="width:90%">
+
+            <input type="range" name="" id="running" step="0.1" oninput="running()">
+
+            <div class="d-flex justify-content-between">
+                <div class="playing-time">0.0</div>
+                <div class="music-time">0.0</div>
+            </div>
+
+        </div>
+        <div class="button">
+            <style>
+                .button img {
+                    height: 70%;
+                    width: 100%;
+                }
+            </style>
+            <button><img src="./shuffle.jpg" alt="img for shuffle" class="shuffle" ></button> <button id="pre" onclick="pre()"><img src="./pre.png" alt=""></button><button onclick="pause()"><img class="pauseimg" src="./play-btn.png" alt=""></button>
+            <button id="next"><img src="./next-btn.png" alt=""></button>
+            <button class="showList"><img src="./list.jpg" alt=""></button>
+        </div>
+        <script src="sportifyApp.js"></script>
+</body>
+
+</html>
+
+</html>

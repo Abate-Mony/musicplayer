@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="player-container">
+
+        <div class="get-music-list">
+
+        </div>
+        <div class="search">
+            <label for="search">search:   <input type="search" name="" id="search" oninput="search()"></label>
+        </div>
+        <div class="music-library">
+        </div>
+        <div class="player-screen">
+            <input type="range" name="" id="volume" step="0.1" max="1" oninput="vol()">
+            <div class="playing-time">hello</div><input type="range" name="" id="running" step="0.1" oninput="running()">
+            <div class="music-time">x:x</div>
+        </div>
+        <marquee behavior="slow" direction="left">
+            <div class="music-name">
+                no-music
+            </div>
+        </marquee>
+        <div class="display">
+            <div class="vol">x</div>
+            <div class="list-of-music">
+                ///
+            </div>
+        </div>
+        <div class="button">
+            <button>0</button> <button id="pre" onclick="pre()">&lt;--</button><button onclick="pause()">[]</button><button onclick="next()" id="next">--></button><button onclick="list()">()</button>
+        </div>
+        <script src="App.js"></script>
+</body>
+
+</html>
